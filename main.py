@@ -25,11 +25,14 @@ def clear_phones(contacts_list):
 
 
 def full_names(correct_number_list):
+    result_list = list()
     for contact in correct_number_list:
         full_name_list = " ".join(contact[0:3]).split()
         if len(full_name_list) !=3:
             full_name_list.append("")
-        result_list = full_name_list + contact[3:]
+        result = full_name_list + contact[3:]
+        result_list.append(result)
+    pprint(result_list)
     return result_list
 
 def final_format(result_list):
